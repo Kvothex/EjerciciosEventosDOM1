@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejerccio 9</title>
+    <style>
+        #boton {
+            position: fixed;
+            bottom: 10px;
+            right: 10px;
+            display: none;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        body {
+            height: 200vh; 
+        }
+    </style>
+</head>
+<body>
+    Primera línea o cabecera
+
+    <div id="boton">Botón</div>
+
+    <script>
+        window.addEventListener("scroll", function() {
+            const boton = document.getElementById("boton");
+            if (window.scrollY > window.innerHeight) {
+                boton.style.display = "block";
+            } else {
+                boton.style.display = "none";
+            }
+        });
+    </script>
+
+</body>
+</html>

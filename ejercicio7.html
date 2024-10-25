@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="c1" style="background: red"></div>
+    <div id="c2" style="background: white"></div>
+    <div id="c3" style="background: blue"></div>
+
+    <script>
+        let color = "white";
+
+        document.getElementById("c1").addEventListener("mouseleave", function() {
+            color = "red";
+        });
+
+        document.getElementById("c3").addEventListener("mouseleave", function() {
+            color = "blue";
+        });
+
+        document.getElementById("c2").addEventListener("mouseenter", function() {
+            this.style.background = color;
+        });
+
+        document.getElementById("c2").addEventListener("mouseleave", function() {
+            this.style.background = "white";
+        });
+    </script>
+
+</body>
+</html>

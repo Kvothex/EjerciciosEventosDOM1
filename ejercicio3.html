@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <form>
+        <input id="precio" type="number" placeholder="Precio" style="margin-right: 10px;">
+        <input id="cantidad" type="number" placeholder="Cantidad" style="margin-right: 10px;">
+        <input type="button" id="enviar" value="Calcular" style="margin-right: 10px;">
+        <input id="total" readonly placeholder="Total">
+    </form>
+
+    <script>
+        document.getElementById("enviar").addEventListener("click", function() {
+            const precio = parseFloat(document.getElementById("precio").value);
+            const cantidad = parseFloat(document.getElementById("cantidad").value);
+            
+            if (!isNaN(precio) && !isNaN(cantidad)) {
+                document.getElementById("total").value = precio * cantidad;
+            } else {
+                document.getElementById("total").value = "Valores no válidos";
+            }
+        });
+    </script>
+</body>
+</html>
